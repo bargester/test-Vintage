@@ -1,0 +1,65 @@
+.location-s {
+  background-color: #252525;
+}
+
+.list-tabs-headers {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  width: 305px;
+  @media screen and (max-width: 600px) {
+    margin: 35px auto 0;
+  }
+  &__link {
+    font-family: SuisseIntl-SemiBold, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 11px;
+    &:hover {
+      color: $main-color;
+    }
+    &--active {
+      color: $main-color;
+    }
+  }
+}
+
+.list-tabs-content {
+  margin-top: 50px;
+  @media screen and (max-width: 600px) {
+    max-width: 300px;
+    width: 100%;
+    margin: 50px auto 0;
+  }
+  &__item {
+    display: none;
+    color: #fff;
+    @media screen and (max-width: 600px) {
+      margin-bottom: 25px;
+    }
+    &--active {
+      display: block;
+    }
+  }
+  &__title {
+    font-family: SuisseIntl-Light, sans-serif;
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 40px;
+    @media screen and (max-width: 600px) {
+      text-align: center;
+    }
+  }
+  &__text {
+    font-family: SuisseIntl-Light, sans-serif;
+    font-size: 11px;
+    line-height: 20px;
+  }
+
+}
+
+.map {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}

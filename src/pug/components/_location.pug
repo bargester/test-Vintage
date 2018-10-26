@@ -1,0 +1,38 @@
+section.location-s
+    .container.container--space-between
+        .column
+            h3.title.title--common.title--detailed Our Offices
+            //Следующий еллемент это табы, я глянул реализацию на codepen https://codepen.io/serg1k/pen/wyyPGY
+            //И боюсь, что пока не могу ее осуществить, хотя в глубене души надеялся на обратное
+            ul.list-tabs-headers
+                li: a(href="#").list-tabs-headers__link.list-tabs-headers__link--active Kyiv
+                li: a(href="#").list-tabs-headers__link New York
+                li: a(href="#").list-tabs-headers__link Guangzhcu
+                li: a(href="#").list-tabs-headers__link Barcelona
+            ul.list-tabs-content
+                li.list-tabs-content__item.list-tabs-content__item--active
+                    h4.list-tabs-content__title Global Message Services Ukraine LLC
+                    p.list-tabs-content__text Kyiv, Stepan Bandera, 33
+                    p.list-tabs-content__text 02066
+                    p.list-tabs-content__text Ukraine
+                li.list-tabs-content__item
+                    h4.list-tabs-content__title Global Message Services USA LLC
+                    p.list-tabs-content__text New Your, Washington, 22
+                    p.list-tabs-content__text 02166
+                    p.list-tabs-content__text USA
+                li.list-tabs-content__item
+                    h4.list-tabs-content__title Global Message Services Some Country LLC
+                    p.list-tabs-content__text City, Some Street, 11
+                    p.list-tabs-content__text 02266
+                    p.list-tabs-content__text Some Country
+                li.list-tabs-content__item
+                    h4.list-tabs-content__title Global Message Services Spain LLC
+                    p.list-tabs-content__text Barcelona, Rambla, 00
+                    p.list-tabs-content__text 02366
+                    p.list-tabs-content__text Spain
+        .column
+            //Что касается карты это работа с Google API + Vue.js
+            //Так же оставляю, на времена лучшей подготовки
+            //Могу конечно, поставить точку псевдоэлементом, или карту через iframe подгрузить
+            //Но это будет грубо, что ли
+            img(src="static/img/content/map.png" alt="map").map

@@ -1,0 +1,23 @@
+section.form-s
+    .container
+        h3.title.title--common.title--detailed Contact Us
+        .container--space-between
+            //Валидацию формы думал, что запросто сделаю, но отказался от этой идеии
+            //Если честно, это хорошее задание, я к нему вернусь еще, когда освою Vue.js на должном уровне
+            //Возможно отправлю еще раз только выполненое полностью
+            form(id="form" method="post" action="#").column.form
+                fieldset.form__fieldset
+                    input(id="formName" type="text" required).form__input-text
+                    label(for="formName").form__label-text Name
+                fieldset.form__fieldset
+                    input(id="formPhone" type="text" required).form__input-text
+                    label(for="formPhone").form__label-text Phone
+                fieldset.form__fieldset
+                    input(id="formEmail" type="text" required).form__input-text
+                    label(for="formEmail").form__label-text E-mail
+                fieldset.form__fieldset--checkbox
+                    input(id="formCheck" type='checkbox' required).form__input-checkbox
+                    label(for="formCheck").form__label-checkbox I agree the processing of personal data
+                button(type="submit").form__submit Get in touch
+            .column.padding-left--small
+                p.text--form Please tell us more about your request and give us info about your company and country

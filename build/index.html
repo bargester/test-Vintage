@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/main.css">
+    <title>Title</title>
+  </head>
+  <body>
+    <section class="contacts-s container">
+      <h1 class="title title--main">Contacts</h1>
+      <div class="container--space-between">
+        <div class="column">
+          <h3 class="title title--common"><span class="color-text">GMS</span> Headquarters</h3>
+          <div class="container--space-between">
+            <div class="column column--left-mini column--margin-top">
+              <p class="text">Global Message Services Ukraine LLC</p>
+              <p class="text">Bundesstrasse 5 | 3rd Floor</p>
+              <p class="text">6300 Zug</p>
+              <p class="text">Switzerland</p><a class="phone-link color-text" href="tel:+41415446200">+41 41 544 62 00</a>
+            </div>
+            <div class="column column--right-mini column--margin-top">
+              <p class="text">Email</p><a class="text--bold" href="mailto:info@gms-worldwide.com">info@gms-worldwide.com</a>
+              <p class="text">Send message</p><a class="text--bold" href="#">Viber us</a>
+              <p class="text">Send form</p><a class="text--bold" href="#">Contact us</a>
+            </div>
+          </div>
+        </div>
+        <div class="column padding-left--big">
+          <h3 class="title title--common">Technical support<span class="color-text"> 24/7</span></h3>
+          <p class="text column--margin-top">
+            GMS understands that it can be hard to follow all new technologies. We regularly provide for all our clients educational trainings to make your operator`s business earn more and better though our best practices.</p><a class="phone-link color-text" href="tel:+41415446206">+41 41 544 62 06</a>
+        </div>
+      </div>
+    </section>
+    <section class="location-s">
+      <div class="container container--space-between">
+        <div class="column">
+          <h3 class="title title--common title--detailed">Our Offices</h3>
+          <!--Следующий еллемент это табы, я глянул реализацию на codepen https://codepen.io/serg1k/pen/wyyPGY-->
+          <!--И боюсь, что пока не могу ее осуществить, хотя в глубене души надеялся на обратное-->
+          <ul class="list-tabs-headers">
+            <li><a class="list-tabs-headers__link list-tabs-headers__link--active" href="#">Kyiv</a></li>
+            <li><a class="list-tabs-headers__link" href="#">New York</a></li>
+            <li><a class="list-tabs-headers__link" href="#">Guangzhcu</a></li>
+            <li><a class="list-tabs-headers__link" href="#">Barcelona</a></li>
+          </ul>
+          <ul class="list-tabs-content">
+            <li class="list-tabs-content__item list-tabs-content__item--active">
+              <h4 class="list-tabs-content__title">Global Message Services Ukraine LLC</h4>
+              <p class="list-tabs-content__text">Kyiv, Stepan Bandera, 33</p>
+              <p class="list-tabs-content__text">02066</p>
+              <p class="list-tabs-content__text">Ukraine</p>
+            </li>
+            <li class="list-tabs-content__item">
+              <h4 class="list-tabs-content__title">Global Message Services USA LLC</h4>
+              <p class="list-tabs-content__text">New Your, Washington, 22</p>
+              <p class="list-tabs-content__text">02166</p>
+              <p class="list-tabs-content__text">USA</p>
+            </li>
+            <li class="list-tabs-content__item">
+              <h4 class="list-tabs-content__title">Global Message Services Some Country LLC</h4>
+              <p class="list-tabs-content__text">City, Some Street, 11</p>
+              <p class="list-tabs-content__text">02266</p>
+              <p class="list-tabs-content__text">Some Country</p>
+            </li>
+            <li class="list-tabs-content__item">
+              <h4 class="list-tabs-content__title">Global Message Services Spain LLC</h4>
+              <p class="list-tabs-content__text">Barcelona, Rambla, 00</p>
+              <p class="list-tabs-content__text">02366</p>
+              <p class="list-tabs-content__text">Spain</p>
+            </li>
+          </ul>
+        </div>
+        <div class="column">
+          <!--Что касается карты это работа с Google API + Vue.js-->
+          <!--Так же оставляю, на времена лучшей подготовки-->
+          <!--Могу конечно, поставить точку псевдоэлементом, или карту через iframe подгрузить-->
+          <!--Но это будет грубо, что ли--><img class="map" src="static/img/content/map.png" alt="map">
+        </div>
+      </div>
+    </section>
+    <section class="form-s">
+      <div class="container">
+        <h3 class="title title--common title--detailed">Contact Us</h3>
+        <div class="container--space-between">
+          <!--Валидацию формы думал, что запросто сделаю, но отказался от этой идеии-->
+          <!--Если честно, это хорошее задание, я к нему вернусь еще, когда освою Vue.js на должном уровне-->
+          <!--Возможно отправлю еще раз только выполненое полностью-->
+          <form class="column form" id="form" method="post" action="#">
+            <fieldset class="form__fieldset">
+              <input class="form__input-text" id="formName" type="text" required>
+              <label class="form__label-text" for="formName">Name</label>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <input class="form__input-text" id="formPhone" type="text" required>
+              <label class="form__label-text" for="formPhone">Phone</label>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <input class="form__input-text" id="formEmail" type="text" required>
+              <label class="form__label-text" for="formEmail">E-mail</label>
+            </fieldset>
+            <fieldset class="form__fieldset--checkbox">
+              <input class="form__input-checkbox" id="formCheck" type="checkbox" required>
+              <label class="form__label-checkbox" for="formCheck">I agree the processing of personal data</label>
+            </fieldset>
+            <button class="form__submit" type="submit">Get in touch</button>
+          </form>
+          <div class="column padding-left--small">
+            <p class="text--form">Please tell us more about your request and give us info about your company and country</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

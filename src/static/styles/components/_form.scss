@@ -1,0 +1,93 @@
+.form-s {
+  padding: 0 0 100px;
+  background: url("../img/general/pattern.png") top center #00b660;
+  background-size: cover;
+}
+
+.form {
+  @media screen and (max-width: 600px) {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__fieldset {
+    position: relative;
+    &--checkbox {
+      margin-top: 15px;
+    }
+  }
+  &__input-text {
+    box-sizing: border-box;
+    display: block;
+    max-width: 540px;
+    width: 100%;
+    border-bottom: solid #000;
+    border-width: 0 0 1px 0;
+    font-family: SuisseIntl-Light, serif;
+    font-size: 16px;
+    line-height: 60px;
+    padding: 0 0 0 100px;
+    background-color: transparent;
+    @media screen and (max-width: 600px) {
+      padding: 0 0 0 50px;
+    }
+    &:focus {
+      color: #fff;
+      border-color: #fff;
+    }
+    //Такой метод я не очень люблю,но без JS работает он отлично
+    &:focus + .form__label-text {
+      color: #fff;
+    }
+  }
+  &__input-checkbox {
+    position: relative;
+    top: 2px;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    &:checked + .form__label-checkbox {
+      color: #fff;
+    }
+  }
+  &__label-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-family: SuisseIntl-Light, serif;
+    font-size: 16px;
+    line-height: 60px;
+    color: #000;
+    cursor: text;
+  }
+  &__label-checkbox {
+    font-family: SuisseIntl-Light, sans-serif;
+    font-size: 18px;
+    line-height: 34px;
+    cursor: pointer;
+  }
+  &__submit{
+    margin-top: 45px;
+    border: 2px solid #262626;
+    background-color: #262626;
+    text-align: center;
+    font-family: SuisseIntl-SemiBold, sans-serif;
+    font-size: 11px;
+    height: 85px;
+    line-height: 85px;
+    width: 280px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: .3s;
+    @media screen and (max-width: 600px) {
+      width: 300px;
+      margin: 45px auto 0;
+    }
+    //Простой но эфектный хавер
+    &:hover{
+      background-color: transparent;
+      color: #000;
+    }
+  }
+}
